@@ -16,3 +16,10 @@ end
 
 students.delete(:cohort2)
 puts students
+
+# students.each do |key, value|
+#   add = [value]
+#   value.inject { |sum, n| sum + n}
+# end  # need to find a way to convert the values in this hash to an new array!
+total_students = students.values.inject { |sum, n| sum + n }  #=>99  |sum| is the accumulator here which equals to the previous sum+n!!!
+puts total_students
